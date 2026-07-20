@@ -9,15 +9,8 @@ const listingSchema = new Schema({
    },
    description: String,
    image:{
-    url:{
-        type: String,
-    default:"https://images.unsplash.com/photo-1774112168823-63b5842067a1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D" ,
-    set: (v)=>
-         v === ""
-     ? "https://unsplash.com/photos/a-white-house-with-lawn-chairs-in-front-of-it-CffBeil_6-Y" 
-     : v,
-   },
-   filename:String,
+    url: String,
+    filename: String,
 },
    price: Number,
    location: String,
