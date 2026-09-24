@@ -67,11 +67,6 @@ const sessionOptions ={
     },
 };
 
-// app.get("/",(req, res)=>{
-//     res.send("Hi, i am root");
-// });
-
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -97,6 +92,10 @@ app.use((req, res, next)=>{
 //     res.send(registeredUser);
 // });
 
+
+app.get("/", (req, res)=> {
+    res.redirect("/listings");
+});
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/",userRouter);
